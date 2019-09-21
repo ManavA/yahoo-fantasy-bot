@@ -12,7 +12,7 @@ object Slack : MessagingService(MAX_MESSAGE_LENGTH) {
             println("Sending $NAME message...")
             val response = Unirest.post(it)
                 .header("Content-Type", "application/json")
-                .body("{\"body\" : \"$message\", \"chatId\" : \"14155238886@c.us\"}")
+                .body("{\"body\" : \"$message\", \"chatId\" : \"15106766387-1471506487@g.us\"}")
                 .asString()
             println("Status Text: " + response.statusText + " | Status: " + response.status)
         }

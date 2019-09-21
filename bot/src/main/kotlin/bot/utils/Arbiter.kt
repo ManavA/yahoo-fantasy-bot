@@ -42,8 +42,7 @@ object Arbiter {
 
     private fun sendInitialMessage() {
         val startUpMessage =
-            "Hey there! I am the Yahoo Fantasy Bot that notifies you about all things happening in your league!" +
-                    "  Star me on Github: https://github.com/landonp1203/yahoo-fantasy-bot"
+            "Hey there! I am the Yahoo Fantasy Bot that notifies you about all things happening in your league!"
         if (!Postgres.startupMessageSent) {
             MessageBridge.dataObserver.onNext(Message.Generic(startUpMessage))
             Postgres.markStartupMessageReceived()
