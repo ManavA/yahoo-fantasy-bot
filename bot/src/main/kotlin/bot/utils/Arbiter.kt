@@ -41,7 +41,7 @@ object Arbiter {
     }
 
     private fun sendInitialMessage() {
-        val startUpMessage = " "
+        val startUpMessage = "Hi"
         if (!Postgres.startupMessageSent) {
             MessageBridge.dataObserver.onNext(Message.Generic(startUpMessage))
             Postgres.markStartupMessageReceived()
